@@ -20,7 +20,7 @@
                if($remove == false) {
                   
                   //set session message
-                  $_SESSION['remove'] = "<div>failed to remove category image</div>";
+                  $_SESSION['remove'] = "<div class='text-red-500'>failed to remove category image</div>";
                   //redirect to manage category page
                   header('location:'. SITE_URL. 'admin/manage-category.php');
                   //then stop the process
