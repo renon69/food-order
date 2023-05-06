@@ -49,29 +49,52 @@
       </tr>
       <br><br>
       <tr>
-            <td>Select Image:</td>
+            <td>Current Image:</td>
             <td>
-                <input type="file" name="image" value="<?=$image_name?>">
+                <?php 
+                // if image name is not emplty 
+                        if($image_name != "") 
+                        {
+                            //display the image
+                            ?>
+                            <img class="h-[150px]" src="<?= SITE_URL;?>images/category/<?= $image_name;?>" alt="">
+                            <?php
+                        }
+                        else 
+                        {
+                            //display message
+                            echo "<div>image no added</div>";
+                        }
+                ?>
             </td>
       </tr>
       <br><br>
+
+      <td>New Image:</td>
+            <td>
+              
+            </td>
+      </tr>
+      <br><br>
+      <!-- featured -->
       <tr>
           <td>Featured:</td>
           <td >
-                <input type="radio" name="featured" value="<?=$featured;?>">
-                <label >Yes</label>
-                <input type="radio" name="featured" value="<?=$featured;?>">
-                <label >No</label>
+          <input type="radio" name="featured" value="<?=$featured;?>" <?php if ($featured == 'yes') echo 'checked'; ?>>
+            <label>Yes</label>
+
+            <input type="radio" name="featured" value="<?=$featured;?>" <?php if ($featured == 'no') echo 'checked'; ?>>
+             <label>No</label>
           </td>
       </tr>
       <br><br>
       <tr>
       <td>Active:</td>
           <td >
-                <input type="radio" name="active" value="<?=$active;?>">
-                <label >Yes</label>
-                <input type="radio" name="active" value="<?=$active;?>">
-                <label >No</label>
+            <input type="radio" name="active" value="<?=$active;?>" <?php if ($active == 'yes') echo 'checked'; ?>>
+            <label>Yes</label>
+            <input type="radio" name="active" value="<?=$active;?>" <?php if ($active == 'no') echo 'checked'; ?>>
+            <label>No</label>
           </td>
       </tr>
       
@@ -80,7 +103,7 @@
       <tr >
           
           <td >
-          <button  class="rounded-lg px-4 py-2 bg-green-700 text-green-100 hover:bg-green-800 duration-300" name="submit">Submit</button>
+          <button  class="rounded-lg px-4 py-2 bg-green-700 text-green-100 hover:bg-green-800 duration-300" name="update">Submit</button>
           </td>
       </tr>
       </div>
@@ -91,5 +114,12 @@
 </div
 
 <?php 
-    if(isset($_POST['submit']))
+    if(isset($_POST['update']))
+    {
+
+    }
+    else 
+    {
+        
+    }
 ?>

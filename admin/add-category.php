@@ -95,7 +95,8 @@
                 //to upload image we need image name, source path and destination path
                 $image_name = $_FILES['image']['name'];
 
-                //auto rename the image
+                if($image_name != "") {
+                        //auto rename the image
                 //get the extension of our image(jpg,png, .. etc)
                 $ext = end(explode('.', $image_name));
 
@@ -118,6 +119,8 @@
                     // stop the process so we dont put the image data in the database
                     die();
                 }
+                }
+                
            }
            else
            {
