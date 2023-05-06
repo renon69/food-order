@@ -35,7 +35,7 @@
             <tr class="border border-black text-left p-">
                 <th>ID</th>
                 <th>Title</th>  
-                <th>image</th>
+                <th>Image</th>
                 <th>Featured</th>
                 <th>Active</th>
                 <th>Actions</th>
